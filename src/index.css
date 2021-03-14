@@ -1,0 +1,326 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  /* background-color: #fffbf9 !important; */
+  background-color: rgb(252, 252, 252) !important;
+}
+.navbar {
+  /* background-color: #fffbf9 !important; */
+  background-color: rgb(252, 252, 252) !important;
+}
+
+.navbar-brand {
+  font-family: "Sacramento", cursive;
+  font-weight: 800;
+  font-size: 2em !important;
+  color: #ffa95e !important;
+}
+
+.navbar-brand:hover {
+  color: #6f6f6f;
+}
+
+.navbar .nav-link {
+  font-weight: 200;
+  font-size: 1em;
+  color: #6f6f6f;
+}
+
+.navbar .nav-link:hover {
+  font-weight: 600;
+  color: #ffa95e;
+}
+
+.navbar-toggler {
+  /* width: 47px;
+  height: 34px; */
+  border: none !important;
+  color: #ffa95e !important;
+  /* border-color: #ffa95e !important; */
+}
+
+.menu_active {
+  font-weight: bold;
+  border-bottom: 1px solid #ffa95e;
+}
+
+/* .jumbo{
+  background-color:beige;
+  height: 500px;
+} */
+
+.bookCover {
+  height: auto;
+  max-width: 100%;
+}
+
+/* .aboutImg{
+  width:700px;
+  height:auto;
+} */
+
+.highlightAbout {
+  font-family: "Sacramento", cursive !important;
+  font-weight: 400 !important;
+  font-size: 5em !important;
+  color: #ffa95e !important;
+}
+
+.buttonS {
+  border: 2px solid #ffa95e !important;
+  border-radius: 25px !important;
+  color: #ffa95e !important;
+  font-weight: 700 !important;
+  background-color: white !important;
+  transition: 0.3s !important;
+  text-decoration: none !important;
+  /* padding-left: 25px; */
+}
+.buttonS:hover {
+  border: 2px solid #ffa95e !important;
+  border-radius: 25px !important;
+  color: white !important;
+  font-weight: 700 !important;
+  background-color: #ffa95e !important;
+  /* padding-left: 25px; */
+}
+
+#header1 {
+  height: 80vh;
+  width: 100%;
+  /* border: 2px solid red; */
+  /* margin-top: 70px; */
+}
+
+.hell {
+  border: 2px solid blue;
+}
+
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.bookProperties {
+  width: 180px;
+  height: 288px;
+  border-radius: 5px;
+  border: 0.5px solid #cecece;
+}
+
+.bookName {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #292929;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.authorName {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #6f6f6f;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.secName {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #6f6f6f;
+  font-family: "Roboto", sans-serif;
+  transition: 0.1s;
+}
+
+.NavClass {
+  text-decoration: none;
+}
+
+.secName:hover {
+  color: #ffa95e !important;
+}
+
+@media (min-width: 300px) {
+  .bookProperties {
+    width: 45px;
+    height: 72px;
+  }
+  .secName {
+    font-size: 0.8rem;
+  }
+
+  .bookName {
+    font-size: 0.6rem;
+    width: 40px;
+  }
+  .authorName {
+    font-size: 0.4rem;
+    width: 40px;
+  }
+}
+
+@media (min-width: 345px) {
+  .bookProperties {
+    width: 65px;
+    height: 104px;
+  }
+  .secName {
+    font-size: 0.8rem;
+  }
+
+  .bookName {
+    font-size: 0.6rem;
+    width: 50px;
+  }
+  .authorName {
+    font-size: 0.4rem;
+    width: 50px;
+  }
+}
+
+@media (min-width: 400px) {
+  .bookProperties {
+    width: 75px;
+    height: 120px;
+  }
+  .secName {
+    font-size: 0.8rem;
+  }
+
+  .bookName {
+    font-size: 0.6rem;
+    width: 60px;
+  }
+  .authorName {
+    font-size: 0.4rem;
+    width: 60px;
+  }
+}
+
+@media (min-width: 544px) {
+  .bookProperties {
+    width: 100px;
+    height: 160px;
+  }
+  .secName {
+    font-size: 1.2rem;
+  }
+
+  .bookName {
+    font-size: 0.7rem;
+    width: 80px;
+  }
+  .authorName {
+    font-size: 0.6rem;
+    width: 80px;
+  }
+}
+
+@media (min-width: 668px) {
+  .bookProperties {
+    width: 110px;
+    height: 176px;
+  }
+  .secName {
+    font-size: 1.3rem;
+  }
+
+  .bookName {
+    font-size: 0.8rem;
+    width: 100px;
+  }
+  .authorName {
+    font-size: 0.6rem;
+    width: 100px;
+  }
+}
+
+@media (min-width: 762px) {
+  .bookProperties {
+    width: 130px;
+    height: 208px;
+  }
+  .secName {
+    font-size: 1.3rem;
+  }
+
+  .bookName {
+    font-size: 0.9rem;
+    width: 110px;
+  }
+  .authorName {
+    font-size: 0.7rem;
+    width: 110px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .bookProperties {
+    width: 160px;
+    height: 256px;
+  }
+  .secName {
+    font-size: 1.3rem;
+  }
+
+  .bookName {
+    font-size: 0.9rem;
+    width: 150px;
+  }
+  .authorName {
+    font-size: 0.7rem;
+    width: 150px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .bookProperties {
+    width: 180px;
+    height: 288px;
+  }
+  .secName {
+    font-size: 1.5rem;
+  }
+
+  .bookName {
+    font-size: 0.9rem;
+  }
+  .authorName {
+    font-size: 0.7rem;
+  }
+}
