@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import RowBook from "./RowBooks";
+import RowBook from "./RowBook";
 import Bdata from "./Bdata";
 
 
@@ -37,10 +37,10 @@ const CarouselRow = (props) => {
   return (
     <Slider {...settings}>
       <div>
-        <RowBook secname1={props.secname1} array={arr1} />
+        <RowBook secname1={props.secname1} array={arr1} catLink={props.catLink} />
       </div>
       <div>
-        <RowBook secname1={props.secname1} array={arr2} />
+        <RowBook secname1={props.secname1} array={arr2} catLink={props.catLink} />
       </div>
     </Slider>
   )

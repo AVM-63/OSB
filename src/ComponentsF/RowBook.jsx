@@ -1,20 +1,20 @@
-/** @format */
-
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Book from "./Book";
+// import Navbar from "./Navbar";
 // import Bdata from "./Bdata";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const RowBook = (props) => {
+
   return (
     <>
       <div className='container-fluid d-flex justify-content-center nav_bg my-xl-5 my-lg-4 my-md-3'>
         <div className='row mt-3'>
           <div className='col-12'>
             <div>
-              <NavLink className='NavClass' to='/listbooks'>
-                <p className='px-0 px-md-4 secName'>{props.secname1}</p>
-              </NavLink>
+              {/* <NavLink className='NavClass' to={props.catLink}> */}
+              <p className='px-0 px-md-4 secName'>{props.secname1}</p>
+              {/* </NavLink> */}
             </div>
             <div className='d-flex flex-row'>
               {/* {arr1.map((val,ind) => {

@@ -1,4 +1,4 @@
-/** @format */
+
 
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -52,9 +52,9 @@ const Navbar = () => {
                       <NavLink
                         activeClassName='menu_active'
                         className='nav-link'
-                        to='/contact'
+                        to='/categories/top-sellers'
                       >
-                        Contact
+                        Categories
                       </NavLink>
                     </li>
                     <li className='nav-item mx-2 px-2'>
