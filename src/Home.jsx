@@ -7,7 +7,7 @@ import CarouselRow from "./ComponentsF/CarouselRow";
 const Home = () => {
   return (
     <>
-      <CarouselRow secname1='Top Sellers' />
+      <CarouselRow secname1='Top Sellers Mama' />
       <CarouselRow secname1='Recently Added' />
       <CarouselRow secname1='Mystery' />
     </>
