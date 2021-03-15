@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Book from "./Book";
-import Bdata from "./Bdata";
+import Book from "../Book";
+import Bdata from "../Bdata";
 // import FullRowBook from "./FullRowBook.jsx"
 
 const ListBooks = (props) => {

@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className='col-12 col-lg-10 my-2 mx-auto'>
             <nav className='navbar navbar-expand-lg navbar-light'>
               <div className='container-fluid'>
-                <NavLink className='navbar-brand' to='/home'>
+                <NavLink className='navbar-brand' to='/categories/all-books'>
                   OneStoreBooks
                 </NavLink>
                 <button
@@ -30,11 +30,20 @@ const Navbar = () => {
                   id='navbarSupportedContent'
                 >
                   <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-                    <li className='nav-item mx-2 px-2'>
+                    {/* <li className='nav-item mx-2 px-2'>
                       <NavLink
                         activeClassName='menu_active'
                         className='nav-link'
                         to='/home'
+                      >
+                        Home
+                      </NavLink>
+                    </li> */}
+                    <li className='nav-item mx-2 px-2'>
+                      <NavLink
+                        activeClassName='menu_active'
+                        className='nav-link'
+                        to='/categories/all-books'
                       >
                         Home
                       </NavLink>
@@ -48,15 +57,7 @@ const Navbar = () => {
                         About
                       </NavLink>
                     </li>
-                    <li className='nav-item mx-2 px-2'>
-                      <NavLink
-                        activeClassName='menu_active'
-                        className='nav-link'
-                        to='/categories/top-sellers'
-                      >
-                        Categories
-                      </NavLink>
-                    </li>
+
                     <li className='nav-item mx-2 px-2'>
                       <NavLink
                         activeClassName='menu_active'

@@ -1,13 +1,13 @@
 import React from "react";
-import NavCat from "./ComponentsF/NavCat";
-import ListBooks from "./ComponentsF/ListBooks";
+import NavCat from "../NavCat";
+
 
 
 const Categories = () => {
   return (
     <>
       <NavCat />
-      {/* <ListBooks secname1="21" /> */}
+
     </>
   );
 };

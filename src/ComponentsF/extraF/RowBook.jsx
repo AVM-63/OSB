@@ -1,8 +1,8 @@
 import React from "react";
-import Book from "./Book";
+import Book from "../Book";
 // import Navbar from "./Navbar";
 // import Bdata from "./Bdata";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const RowBook = (props) => {
 
@@ -12,9 +12,9 @@ const RowBook = (props) => {
         <div className='row mt-3'>
           <div className='col-12'>
             <div>
-              {/* <NavLink className='NavClass' to={props.catLink}> */}
-              <p className='px-0 px-md-4 secName'>{props.secname1}</p>
-              {/* </NavLink> */}
+              <NavLink className='NavClass' to={props.catLink}>
+                <p className='px-0 px-md-4 secName'>{props.secname1}</p>
+              </NavLink>
             </div>
             <div className='d-flex flex-row'>
               {/* {arr1.map((val,ind) => {

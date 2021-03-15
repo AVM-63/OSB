@@ -32,6 +32,15 @@ const Navbar = () => {
                                             <NavLink
                                                 activeClassName='menu_active'
                                                 className='nav-link'
+                                                to='/categories/all-books'
+                                            >
+                                                All Books
+                                    </NavLink>
+                                        </li>
+                                        <li className='nav-item mx-2 px-2'>
+                                            <NavLink
+                                                activeClassName='menu_active'
+                                                className='nav-link'
                                                 to='/categories/top-sellers'
                                             >
                                                 Top Sellers
@@ -41,11 +50,12 @@ const Navbar = () => {
                                             <NavLink
                                                 activeClassName='menu_active'
                                                 className='nav-link'
-                                                to='/categories/true-crime'
+                                                to='/categories/biographies'
                                             >
-                                                True Crime
+                                                Biographies
                                     </NavLink>
                                         </li>
+
                                         <li className='nav-item mx-2 px-2'>
                                             <NavLink
                                                 activeClassName='menu_active'
@@ -68,9 +78,9 @@ const Navbar = () => {
                                             <NavLink
                                                 activeClassName='menu_active'
                                                 className='nav-link'
-                                                to='/categories/biographies'
+                                                to='/categories/true-crime'
                                             >
-                                                Biographies
+                                                True Crime
                                     </NavLink>
                                         </li>
                                     </ul>

@@ -232,8 +232,8 @@ body {
 
 @media (min-width: 544px) {
   .bookProperties {
-    width: 100px;
-    height: 160px;
+    width: 200px;
+    height: 320px;
   }
   .secName {
     font-size: 1.2rem;
@@ -251,8 +251,8 @@ body {
 
 @media (min-width: 668px) {
   .bookProperties {
-    width: 110px;
-    height: 176px;
+    width: 210px;
+    height: 336px;
   }
   .secName {
     font-size: 1.3rem;
@@ -270,8 +270,8 @@ body {
 
 @media (min-width: 762px) {
   .bookProperties {
-    width: 130px;
-    height: 208px;
+    width: 180px;
+    height: 288px;
   }
   .secName {
     font-size: 1.3rem;
@@ -290,8 +290,10 @@ body {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .bookProperties {
-    width: 160px;
-    height: 256px;
+    width: 230px;
+    /* width: 160px; */
+    height: 368px;
+    /* height: 256px; */
   }
   .secName {
     font-size: 1.3rem;
@@ -309,6 +311,22 @@ body {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .bookProperties {
+    width: 220px;
+    height: 352px;
+  }
+  .secName {
+    font-size: 1.5rem;
+  }
+
+  .bookName {
+    font-size: 0.9rem;
+  }
+  .authorName {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1400px) {
   .bookProperties {
     width: 180px;
     height: 288px;
