@@ -13,6 +13,8 @@ import Fiction from "./categoryPages/Fiction";
 import TrueCrime from "./categoryPages/TrueCrime";
 import Biographies from "./categoryPages/Biographies";
 import AllBooks from "./categoryPages/AllBooks";
+import FormSignup from "./FormF/FormSignup";
+import FormLogin from "./FormF/FormLogin";
 
 const App = () => {
   return (
@@ -29,6 +31,8 @@ const App = () => {
         <Route exact path="/categories/top-sellers" component={TopSellers} />
         <Route exact path="/categories/all-books" component={AllBooks} />
         <Route exact path="/myaccount" component={MyAccount} />
+        <Route exact path="/myaccount/form-signup" component={FormSignup} />
+        <Route exact path="/myaccount/form-login" component={FormLogin} />
         {/* <Route exact path="/home" component={Home} /> */}
         {/* <Route exact path="/listbooks" component={ListBooks} /> */}
         <Redirect to="/categories/all-books" />

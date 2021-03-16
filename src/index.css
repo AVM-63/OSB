@@ -173,60 +173,73 @@ body {
   color: #ffa95e !important;
 }
 
+
+.cont11{
+  align-self:center !important;
+}
+
+
+.FormBox{
+  width: 800px;
+  height: 400px;
+  background-color: #ffa95e;
+  
+}
+
 @media (min-width: 300px) {
   .bookProperties {
-    width: 45px;
-    height: 72px;
+    width: 120px;
+    height: 192px;
   }
   .secName {
     font-size: 0.8rem;
   }
 
   .bookName {
-    font-size: 0.6rem;
-    width: 40px;
+    font-size: 0.9rem;
+    width: 100px;
   }
   .authorName {
-    font-size: 0.4rem;
-    width: 40px;
+    font-size: 0.6rem;
+    width: 100px;
   }
 }
 
 @media (min-width: 345px) {
   .bookProperties {
-    width: 65px;
-    height: 104px;
+    width: 130px;
+    height: 208px;
   }
   .secName {
     font-size: 0.8rem;
   }
 
   .bookName {
-    font-size: 0.6rem;
-    width: 50px;
+    font-size: 0.9rem;
+    width: 150px;
   }
   .authorName {
-    font-size: 0.4rem;
-    width: 50px;
+    font-size: 0.7rem;
+    width: 150px;
   }
 }
 
 @media (min-width: 400px) {
   .bookProperties {
-    width: 75px;
-    height: 120px;
+    width: 160px;
+    height: 256px;
   }
   .secName {
     font-size: 0.8rem;
   }
 
   .bookName {
-    font-size: 0.6rem;
-    width: 60px;
+    font-size: 1rem;
+    width: 160px;
   }
   .authorName {
-    font-size: 0.4rem;
-    width: 60px;
+    font-size: 0.7rem;
+    width: 160px;
   }
 }
 
@@ -241,11 +254,11 @@ body {
 
   .bookName {
     font-size: 0.7rem;
-    width: 80px;
+    width:160px;
   }
   .authorName {
     font-size: 0.6rem;
-    width: 80px;
+    width:160px;
   }
 }
 
@@ -260,11 +273,11 @@ body {
 
   .bookName {
     font-size: 0.8rem;
-    width: 100px;
+    width: 170px;
   }
   .authorName {
     font-size: 0.6rem;
-    width: 100px;
+    width: 170px;
   }
 }
 
@@ -279,11 +292,11 @@ body {
 
   .bookName {
     font-size: 0.9rem;
-    width: 110px;
+    width: 180px;
   }
   .authorName {
     font-size: 0.7rem;
-    width: 110px;
+    width: 180px;
   }
 }
 
@@ -341,8 +354,4 @@ body {
   .authorName {
     font-size: 0.7rem;
   }
-}
-
-.cont11{
-  align-self:center !important;
 }
