@@ -12,7 +12,9 @@ const Book = (props) => {
         <div className="mt-2">
           <p className="my-0 bookName">{props.bookN}</p>
           <p className="my-0 authorName">{props.authorN}</p>
+          <p className="my-0 priceTag">₹{props.price}</p>
         </div>
+
       </div>
 
     </>

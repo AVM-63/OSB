@@ -18,12 +18,12 @@ const IndBook = (props) => {
                     // your code here
                     <>
                         <NavCat />
-                        <div className="container mt-5">
-                            <div className="row d-flex pt-5">
-                                <div className="col-4 ">
+                        <div className="container mt-lg-5">
+                            <div className="row d-flex justify-md-content-center align-items-center pt-5">
+                                <div className="col-12 col-md-4">
                                     <img className="largeBookProperties" src={book.imgsrc} alt={book.bookN}></img>
                                 </div>
-                                <div className="col-6 mt-4">
+                                <div className="col-lg-6 col-md-12 mr-md-5 mx-lg-5 mx-xl-0 mt-4">
                                     <p className="explainer pt-3 my-0">Book</p>
                                     <span className="firstLink">
                                         <h1 className="largeBookName my-0">{book.bookN}</h1>

@@ -21,6 +21,7 @@ const CategoryPage = (props) => {
                                     imgsrc={val.imgsrc}
                                     booklink={val.booklink}
                                     bookN={val.bookN}
+                                    price={val.price}
                                 />
                             </div>
                         );
