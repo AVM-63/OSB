@@ -12,6 +12,7 @@ import FormLogin from "./pages/FormF/FormLogin";
 import IndBook from "./Components/IndBook";
 // import IndBook from "../Components/IndBook";
 import Topics from "./pages/categoryPages/Topics";
+import Footer from "./Components/Footer";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/book/:id" component={IndBook} />
         <Redirect to="/categories/all-books" />
       </Switch>
+      <Footer />
     </>
   );
 };

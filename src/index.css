@@ -7,9 +7,19 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html{
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
   /* background-color: #fffbf9 !important; */
   background-color: rgb(252, 252, 252) !important;
+
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 .navbar {
   /* background-color: #fffbf9 !important; */
@@ -21,6 +31,12 @@ body {
   font-weight: 800;
   font-size: 2em !important;
   color: #ffa95e !important;
+}
+.navbar-brand2 {
+  font-family: "Sacramento", cursive;
+  font-weight: 800;
+  font-size: 2em !important;
+  color: #ffffff !important;
 }
 
 .navbar-brand:hover {
@@ -223,6 +239,18 @@ body {
   transition: 0.5s;
 }
 
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #ffa95e;
+  text-align: center;
+  height: 60px;
+  /* position: fixed; */
+  /* bottom: 0; */
+}
 
 .secName {
   font-size: 1.5rem;
