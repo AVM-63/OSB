@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../src/FormF/Form";
+import Form from "./FormF/Form";
 
 
 const MyAccount = () => {

@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+
 const Book = (props) => {
   return (
     <>
-      <div className="px-xs-1 px-sm-2 px-md-2 px-lg-3 px-xl-4 py-lg-2">
-        <NavLink to={props.booklink}>
+      <div className="px-xs-1 px-sm-2 px-md-2 px-lg-3 px-xl-4 py-lg-2" >
+        <NavLink to={`/book/${props.id}`}>
           <img className="bookProperties" src={props.imgsrc} alt="Book"></img>
         </NavLink>
         <div className="mt-2">

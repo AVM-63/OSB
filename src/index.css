@@ -132,6 +132,13 @@ body {
   border: 0.5px solid #cecece;
 }
 
+.largeBookProperties {
+  width: 300px;
+  height: 480px;
+  border-radius: 5px;
+  border: 0.5px solid #cecece;
+}
+
 .bookName {
   font-size: 0.9rem;
   font-weight: 400;
@@ -156,6 +163,66 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.largeBookName {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #292929;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+
+  width: 600px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.largeAuthorName {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #6f6f6f;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.bookDescription{
+  font-size: 1rem;
+  font-weight: 300;
+  color: #939393;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+.explainer{
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ffa95e;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.buyButton{
+  border-radius:10px !important;
+  background-color: #ffa95e !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  font-family: "Roboto", sans-serif !important;
+  text-transform: capitalize !important;
+
+}
+.buyButton:hover{
+  background-color: #ff8b26 !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+
 
 .secName {
   font-size: 1.5rem;
