@@ -1,6 +1,6 @@
 import React from "react";
-import Landing from "./ComponentsF/Landing";
-import growth from "../src/imageC/growth2.svg";
+import Landing from "../Components/Landing";
+import growth from "../images/vectorImages/growth2.svg";
 
 
 const About = () => {

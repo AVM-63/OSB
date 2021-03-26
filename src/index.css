@@ -7,10 +7,27 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html{
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
   /* background-color: #fffbf9 !important; */
   background-color: rgb(252, 252, 252) !important;
+
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
+
+/* NAVBAR */
+
+.searchField{
+
+}
+
 .navbar {
   /* background-color: #fffbf9 !important; */
   background-color: rgb(252, 252, 252) !important;
@@ -21,6 +38,12 @@ body {
   font-weight: 800;
   font-size: 2em !important;
   color: #ffa95e !important;
+}
+.navbar-brand2 {
+  font-family: "Sacramento", cursive;
+  font-weight: 800;
+  font-size: 2em !important;
+  color: #ffffff !important;
 }
 
 .navbar-brand:hover {
@@ -51,21 +74,10 @@ body {
   border-bottom: 1px solid #ffa95e;
 }
 
-/* .jumbo{
-  background-color:beige;
-  height: 500px;
-} */
 
-.bookCover {
-  height: auto;
-  max-width: 100%;
-}
 
-/* .aboutImg{
-  width:700px;
-  height:auto;
-} */
 
+/* LANDING PAGE */
 .highlightAbout {
   font-family: "Sacramento", cursive !important;
   font-weight: 400 !important;
@@ -81,15 +93,16 @@ body {
   background-color: white !important;
   transition: 0.3s !important;
   text-decoration: none !important;
-  /* padding-left: 25px; */
+
 }
+
 .buttonS:hover {
   border: 2px solid #ffa95e !important;
   border-radius: 25px !important;
   color: white !important;
   font-weight: 700 !important;
   background-color: #ffa95e !important;
-  /* padding-left: 25px; */
+
 }
 
 #header1 {
@@ -124,10 +137,23 @@ body {
     transform: translateY(-10px);
   }
 }
+/* BOOK */
+
+.bookCover {
+  height: auto;
+  max-width: 100%;
+}
 
 .bookProperties {
   width: 180px;
   height: 288px;
+  border-radius: 5px;
+  border: 0.5px solid #cecece;
+}
+
+.largeBookProperties {
+  width: 300px;
+  height: 480px;
   border-radius: 5px;
   border: 0.5px solid #cecece;
 }
@@ -138,6 +164,7 @@ body {
   color: #292929;
   font-family: "Roboto", sans-serif;
   text-transform: capitalize;
+  text-decoration: none !important;
 
   width: 170px;
   white-space: nowrap;
@@ -150,11 +177,94 @@ body {
   color: #6f6f6f;
   font-family: "Roboto", sans-serif;
   text-transform: capitalize;
+  text-decoration: none !important;
 
   width: 170px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.priceTag {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #ff8b26;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none !important;
+}
+
+.largeBookName {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #292929;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+
+  width: 600px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.largeAuthorName {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #6f6f6f;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.bookDescription{
+  font-size: 1rem;
+  font-weight: 300;
+  color: #939393;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+.explainer{
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ffa95e;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.buyButton{
+  border-radius:10px !important;
+  background-color: #ffa95e !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  font-family: "Roboto", sans-serif !important;
+  text-transform: capitalize !important;
+
+}
+.buyButton:hover{
+  background-color: #ff8b26 !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+
+
+
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #ffa95e;
+  text-align: center;
+  height: 60px;
+  /* position: fixed; */
+  /* bottom: 0; */
 }
 
 .secName {
@@ -173,67 +283,83 @@ body {
   color: #ffa95e !important;
 }
 
+
+.cont11{
+  align-self:center !important;
+}
+
+
+.FormBox{
+  width: 800px;
+  height: 400px;
+  background-color: #ffa95e;
+  
+}
+
+
+/* MEDIA RESIZING */
+
 @media (min-width: 300px) {
   .bookProperties {
-    width: 45px;
-    height: 72px;
+    width: 120px;
+    height: 192px;
   }
   .secName {
     font-size: 0.8rem;
   }
 
   .bookName {
-    font-size: 0.6rem;
-    width: 40px;
+    font-size: 0.9rem;
+    width: 100px;
   }
   .authorName {
-    font-size: 0.4rem;
-    width: 40px;
+    font-size: 0.6rem;
+    width: 100px;
   }
 }
 
 @media (min-width: 345px) {
   .bookProperties {
-    width: 65px;
-    height: 104px;
+    width: 130px;
+    height: 208px;
   }
   .secName {
     font-size: 0.8rem;
   }
 
   .bookName {
-    font-size: 0.6rem;
-    width: 50px;
+    font-size: 0.9rem;
+    width: 150px;
   }
   .authorName {
-    font-size: 0.4rem;
-    width: 50px;
+    font-size: 0.7rem;
+    width: 150px;
   }
 }
 
 @media (min-width: 400px) {
   .bookProperties {
-    width: 75px;
-    height: 120px;
+    width: 160px;
+    height: 256px;
   }
   .secName {
     font-size: 0.8rem;
   }
 
   .bookName {
-    font-size: 0.6rem;
-    width: 60px;
+    font-size: 1rem;
+    width: 160px;
   }
   .authorName {
-    font-size: 0.4rem;
-    width: 60px;
+    font-size: 0.7rem;
+    width: 160px;
   }
 }
 
 @media (min-width: 544px) {
   .bookProperties {
-    width: 100px;
-    height: 160px;
+    width: 200px;
+    height: 320px;
   }
   .secName {
     font-size: 1.2rem;
@@ -241,18 +367,18 @@ body {
 
   .bookName {
     font-size: 0.7rem;
-    width: 80px;
+    width:160px;
   }
   .authorName {
     font-size: 0.6rem;
-    width: 80px;
+    width:160px;
   }
 }
 
 @media (min-width: 668px) {
   .bookProperties {
-    width: 110px;
-    height: 176px;
+    width: 210px;
+    height: 336px;
   }
   .secName {
     font-size: 1.3rem;
@@ -260,18 +386,18 @@ body {
 
   .bookName {
     font-size: 0.8rem;
-    width: 100px;
+    width: 170px;
   }
   .authorName {
     font-size: 0.6rem;
-    width: 100px;
+    width: 170px;
   }
 }
 
 @media (min-width: 762px) {
   .bookProperties {
-    width: 130px;
-    height: 208px;
+    width: 180px;
+    height: 288px;
   }
   .secName {
     font-size: 1.3rem;
@@ -279,19 +405,25 @@ body {
 
   .bookName {
     font-size: 0.9rem;
-    width: 110px;
+    width: 180px;
   }
   .authorName {
     font-size: 0.7rem;
-    width: 110px;
+    width: 180px;
+  }
+  .largeBookProperties{
+    width: 230px;
+    height: 368px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .bookProperties {
-    width: 160px;
-    height: 256px;
+    width: 230px;
+    /* width: 160px; */
+    height: 368px;
+    /* height: 256px; */
   }
   .secName {
     font-size: 1.3rem;
@@ -305,10 +437,37 @@ body {
     font-size: 0.7rem;
     width: 150px;
   }
+  .largeAuthorName{
+    font-size: 1.2rem;
+  }
+  .largeBookName{
+    font-size: 1.8rem;
+  }
+  .largeBookProperties{
+    width: 300px;
+    height: 480px;
+  }
+  
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .bookProperties {
+    width: 220px;
+    height: 352px;
+  }
+  .secName {
+    font-size: 1.5rem;
+  }
+
+  .bookName {
+    font-size: 0.9rem;
+  }
+  .authorName {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1400px) {
   .bookProperties {
     width: 180px;
     height: 288px;
