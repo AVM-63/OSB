@@ -11,7 +11,6 @@ import IndBook from "./Components/IndBook";
 import Topics from "./pages/categoryPages/Topics";
 // import Footer from "./Components/Footer";
 
-
 const App = () => {
   return (
     <>
@@ -31,3 +30,5 @@ const App = () => {
 };
 
 export default App;
+
+// MA
