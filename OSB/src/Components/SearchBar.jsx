@@ -29,7 +29,7 @@ const SearchBar = () => {
       <div className="searchbar mx-5 px-5">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search by Title"
           onChange={inputEvent}
           value={bookSearch}
         />

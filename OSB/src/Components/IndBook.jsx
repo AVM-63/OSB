@@ -6,6 +6,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 const IndBook = (props) => {
   const [dbData, setDB] = useState([]);
+  const [book, setBook] = useState({});
 
   useEffect(() => {
     fetch('http://localhost:2000/getAll', {
@@ -18,20 +19,22 @@ const IndBook = (props) => {
   }, []);
   console.log('dbData', dbData);
 
-  const [book, setBook] = useState({});
   useEffect(() => {
-    let temp2 = Bdata.find(
-      (b) => String(b.id) === String(props.match.params.id)
-    );
-    setBook(temp2);
-  }, [props]);
+    if (dbData.length != 0) {
+      let temp2 = dbData.find(
+        (b) => String(b.id) === String(props.match.params.id)
+      );
+      console.log('find', temp2);
+      setBook(temp2);
+    }
+  }, [dbData]);
 
   console.log('Bdata', Bdata);
   console.log('book', book);
 
   return (
     <>
-      {Object.keys(book).length !== 0 ? (
+      {book != {} && Object.keys(book).length !== 0 ? (
         <>
           <NavCat />
           <div className="container mt-lg-5">
@@ -55,6 +58,9 @@ const IndBook = (props) => {
                 <p className="explainer pt-3 my-0">Price</p>
                 <p className="bookDescription my-0">₹{book.price}</p>
                 <button className="btn buyButton mt-3">Buy Now</button>
+                <button className="btn cartButton ms-3 mt-3">
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>

@@ -24,7 +24,9 @@ const App = () => {
         <Route path="/book/:id" component={IndBook} />
         <Redirect to="/categories/all-books" />
       </Switch>
-      <Footer />
+      <div className="d-none d-lg-block">
+        <Footer />
+      </div>
     </>
   );
 };

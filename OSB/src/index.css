@@ -49,10 +49,26 @@ body {
 .searchResult {
   font-size: 1rem;
   font-weight: 400;
+  color: #8f8f8f;
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  text-decoration: none !important;
+  padding-bottom: 8px;
+}
+
+.searchResult:hover {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffa95e;
+  text-decoration: none !important;
+}
+.searchResLink {
+  font-size: 1rem;
+  font-weight: 400;
   color: #292929;
   font-family: 'Roboto', sans-serif;
   text-transform: capitalize;
-  /* text-decoration: none !important; */
+  text-decoration: none !important;
   padding-bottom: 8px;
 }
 
@@ -177,6 +193,11 @@ body {
   height: 288px;
   border-radius: 5px;
   border: 0.5px solid #cecece;
+  transition: all 0.3s;
+}
+
+.bookProperties:hover {
+  transform: translateY(-5px);
 }
 
 .largeBookProperties {
@@ -278,6 +299,21 @@ body {
   transition: 0.5s;
 }
 
+.cartButton {
+  border-radius: 10px !important;
+  background-color: #b4b4b4 !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: capitalize !important;
+}
+.cartButton:hover {
+  background-color: #949494 !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+
 .footer {
   position: absolute;
   right: 0;
@@ -289,6 +325,10 @@ body {
   height: 60px;
   /* position: fixed; */
   /* bottom: 0; */
+}
+
+.footerLink {
+  text-decoration: none;
 }
 
 .secName {

@@ -23,8 +23,12 @@ const Sresult = ({ name, val, clear }) => {
               name !== '' &&
               data.map((d) => {
                 return (
-                  <Link to={`/book/${d.id}`} onClick={clear}>
-                    <div className="searchResult">{d.bookN}</div>
+                  <Link
+                    className="searchResLink"
+                    to={`/book/${d.id}`}
+                    onClick={clear}
+                  >
+                    <div className="searchResult ms-2">{d.bookN}</div>
                   </Link>
                 );
               })}
