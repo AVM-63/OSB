@@ -139,6 +139,11 @@ body {
   border: 2px solid blue;
 }
 
+.loading {
+  margin-left: 50%;
+  margin-top: 150px;
+}
+
 .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }

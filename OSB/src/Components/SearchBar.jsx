@@ -19,7 +19,7 @@ const SearchBar = () => {
       .then((res) => res.json())
       .then((val) => {
         // your data is in val
-        console.log('Sresult Value hai ye:', val);
+        // console.log('Sresult Value hai ye:', val);
         setInit(val);
       });
   }, []);
