@@ -10,6 +10,7 @@ import FormLogin from './pages/FormF/FormLogin';
 import IndBook from './Components/IndBook';
 import Topics from './pages/categoryPages/Topics';
 import Footer from './Components/Footer';
+import Form from './pages/FormF/Form';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route exact path="/myaccount" component={MyAccount} />
         <Route exact path="/myaccount/form-signup" component={FormSignup} />
         <Route exact path="/myaccount/form-login" component={FormLogin} />
+        <Route exact path="/myaccount/form" component={Form} />
         <Route path="/book/:id" component={IndBook} />
         <Redirect to="/categories/all-books" />
       </Switch>
