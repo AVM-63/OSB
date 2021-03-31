@@ -2,9 +2,16 @@ import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import About from './pages/About';
+import MainAccountPage from './pages/MainAccountPage';
 import MyAccount from './pages/MyAccount';
 import Navbar from './Components/Navbar';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import {
+  Router,
+  BrowserRouter,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import FormSignup from './pages/FormF/FormSignup';
 import FormLogin from './pages/FormF/FormLogin';
 import IndBook from './Components/IndBook';
@@ -15,7 +22,7 @@ import Form2 from './pages/FormF/Form2';
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <Switch>
         <Route exact path="/about" component={About} />
@@ -26,12 +33,13 @@ const App = () => {
         <Route exact path="/myaccount/form" component={Form} />
         <Route exact path="/myaccount/form2" component={Form2} />
         <Route path="/book/:id" component={IndBook} />
+        <Route path="/myaccount/user" component={MainAccountPage} />
         <Redirect to="/categories/all-books" />
       </Switch>
       <div className="d-none d-lg-block">
         <Footer />
       </div>
-    </>
+    </BrowserRouter>
   );
 };
 

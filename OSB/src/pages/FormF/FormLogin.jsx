@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import validate from './validateInfo';
 import MainAccountPage from '../MainAccountPage';
 import './Form.css';
 
 let log = false;
-const FormLogin = ({ submitForm }) => {
+const FormLogin = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // if (localStorage.getItem('account')) return <Redirect to="/myaccount" />;
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch('http://localhost:2000/signin', {
@@ -29,10 +30,13 @@ const FormLogin = ({ submitForm }) => {
           alert('You dont have an account!');
         } else {
           alert('Yessir! You have an account!');
+          let obj = { data: result };
+          localStorage.setItem('account', JSON.stringify(obj));
+          props.props.history.push('/myaccount/user');
         }
       });
   };
-
+  console.log('mama', props);
   return (
     <div className="form-content-right">
       <form onSubmit={handleSubmit} className="form" noValidate>
@@ -60,7 +64,7 @@ const FormLogin = ({ submitForm }) => {
           />
         </div>
         <button className="form-input-btn" type="submit">
-          Sign up
+          Log In
         </button>
         <span className="form-input-login">
           Don't have an account? Make one{' '}

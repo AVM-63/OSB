@@ -17,20 +17,20 @@ const IndBook = (props) => {
         setDB(val);
       });
   }, []);
-  console.log('dbData', dbData);
+  // console.log('dbData', dbData);
 
   useEffect(() => {
     if (dbData.length != 0) {
       let temp2 = dbData.find(
         (b) => String(b.id) === String(props.match.params.id)
       );
-      console.log('find', temp2);
+      // console.log('find', temp2);
       setBook(temp2);
     }
   }, [dbData]);
 
-  console.log('Bdata', Bdata);
-  console.log('book', book);
+  // console.log('Bdata', Bdata);
+  // console.log('book', book);
 
   return (
     <>

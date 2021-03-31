@@ -1,58 +1,74 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
 
 const MainAccountPage = (props) => {
+  const [localArray, setLocalArray] = useState([]);
+  useEffect(() => {
+    let temp = localStorage.getItem('account');
+    if (temp) {
+      setLocalArray(JSON.parse(temp));
+    }
+  }, []);
+
   return (
     <>
-      <section
-        id="header3"
-        className="d-flex align-items-center my-auto mt-5 pt-5 "
-      >
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-10 mx-auto">
-              <div className="row d-flex align-items-start justify-content-center">
-                <div className="col-md-3">
-                  <h1 className="accountName">User1</h1>
-                  <p className="mb-2 ">useremail@gmail.com</p>
-                  <div className="mt-4">
-                    <NavLink
-                      to="/myaccount/form2"
-                      className="btn btn-primary buttonS"
-                    >
-                      Log Out
-                    </NavLink>
+      {localArray.length != 0 ? (
+        <section
+          id="header3"
+          className="d-flex align-items-center my-auto mt-5 pt-5 "
+        >
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-10 mx-auto">
+                <div className="row d-flex align-items-start justify-content-center">
+                  <div className="col-md-3">
+                    <h1 className="accountName">
+                      {localArray.data[0].username}
+                    </h1>
+                    <p className="mb-2 ">{localArray.data[0].email}</p>
+                    <div className="mt-4">
+                      <NavLink
+                        to="/myaccount/form2"
+                        className="btn btn-primary buttonS"
+                        onClick={() => localStorage.clear()}
+                      >
+                        Log Out
+                      </NavLink>
+                    </div>
                   </div>
-                </div>
-                <div className="col-md-3">
-                  <h1 className="accountName">Cart</h1>
-                  <p className="mb-2 ">Book 1</p>
-                  <p className="mb-2 ">Book 2</p>
-                  <p className="mb-2 ">Book 3</p>
-                  <p className="mb-2 ">Book 4</p>
-                  <p className="mb-2 ">Book 5</p>
-                  <div className="mt-4">
-                    <NavLink
-                      to="/myaccount/form"
-                      className="btn btn-primary buttonS"
-                    >
-                      Checkout
-                    </NavLink>
+                  <div className="col-md-3">
+                    <h1 className="accountName">Cart</h1>
+                    <p className="mb-2 ">Book 1</p>
+                    <p className="mb-2 ">Book 2</p>
+                    <p className="mb-2 ">Book 3</p>
+                    <p className="mb-2 ">Book 4</p>
+                    <p className="mb-2 ">Book 5</p>
+                    <div className="mt-4">
+                      <NavLink
+                        to="/myaccount/form"
+                        className="btn btn-primary buttonS"
+                      >
+                        Checkout
+                      </NavLink>
+                    </div>
                   </div>
-                </div>
-                <div className="col-md-3">
-                  <h1 className="accountName">Recent Orders</h1>
-                  <p className="mb-2 ">Book 1</p>
-                  <p className="mb-2 ">Book 2</p>
-                  <p className="mb-2 ">Book 3</p>
-                  <p className="mb-2 ">Book 4</p>
-                  <p className="mb-2 ">Book 5</p>
+                  <div className="col-md-3">
+                    <h1 className="accountName">Recent Orders</h1>
+                    <p className="mb-2 ">Book 1</p>
+                    <p className="mb-2 ">Book 2</p>
+                    <p className="mb-2 ">Book 3</p>
+                    <p className="mb-2 ">Book 4</p>
+                    <p className="mb-2 ">Book 5</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        <Spinner className="loading" animation="border" variant="warning" />
+      )}
     </>
   );
 };

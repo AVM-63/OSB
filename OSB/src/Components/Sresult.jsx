@@ -5,7 +5,7 @@ const Sresult = ({ name, val, clear }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log(name);
+    // console.log(name);
     if (val.length !== 0) {
       let tempo = val.filter((b) =>
         String(b.bookN).toLowerCase().startsWith(name.toLowerCase())
