@@ -1,14 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import validate from './validateInfo';
 import UseForm from './UseForm';
+import FormSuccess from './FormSuccess';
 import './Form.css';
 
 const FormSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = UseForm(
-    submitForm,
-    validate
-  );
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [password2, setpassword2] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Printing data:', username, email, password, password2);
+    if (password2 != password) {
+      console.log('Passwords arent same!');
+      alert("Passwords don't match");
+    } else {
+      alert('Account Created!');
+      fetch('http://localhost:2000/signup', {
+        method: 'POST',
+        body: JSON.stringify({
+          data: {
+            username,
+            email,
+            password,
+            password2,
+          },
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log('value:', result);
+        });
+    }
+  };
 
   return (
     <div className="form-content-right">
@@ -21,10 +51,9 @@ const FormSignup = ({ submitForm }) => {
             type="text"
             name="username"
             placeholder="Enter your username"
-            value={values.username}
-            onChange={handleChange}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
-          {errors.username && <p>{errors.username}</p>}
         </div>
         <div className="form-inputs">
           <label className="form-label">Email</label>
@@ -33,10 +62,9 @@ const FormSignup = ({ submitForm }) => {
             type="email"
             name="email"
             placeholder="Enter your email"
-            value={values.email}
-            onChange={handleChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          {errors.email && <p>{errors.email}</p>}
         </div>
         <div className="form-inputs">
           <label className="form-label">Password</label>
@@ -45,10 +73,9 @@ const FormSignup = ({ submitForm }) => {
             type="password"
             name="password"
             placeholder="Enter your password"
-            value={values.password}
-            onChange={handleChange}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-          {errors.password && <p>{errors.password}</p>}
         </div>
         <div className="form-inputs">
           <label className="form-label">Confirm Password</label>
@@ -57,17 +84,16 @@ const FormSignup = ({ submitForm }) => {
             type="password"
             name="password2"
             placeholder="Confirm your password"
-            value={values.password2}
-            onChange={handleChange}
+            value={password2}
+            onChange={(e) => setpassword2(e.target.value)}
           />
-          {errors.password2 && <p>{errors.password2}</p>}
         </div>
         <button className="form-input-btn" type="submit">
           Sign up
         </button>
         <span className="form-input-login">
           Already have an account? Login{' '}
-          <NavLink to="/myaccount/form-login">here</NavLink>
+          <NavLink to="/myaccount/form2">here</NavLink>
         </span>
       </form>
     </div>

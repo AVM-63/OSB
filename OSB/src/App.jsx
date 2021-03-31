@@ -11,6 +11,7 @@ import IndBook from './Components/IndBook';
 import Topics from './pages/categoryPages/Topics';
 import Footer from './Components/Footer';
 import Form from './pages/FormF/Form';
+import Form2 from './pages/FormF/Form2';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route exact path="/myaccount/form-signup" component={FormSignup} />
         <Route exact path="/myaccount/form-login" component={FormLogin} />
         <Route exact path="/myaccount/form" component={Form} />
+        <Route exact path="/myaccount/form2" component={Form2} />
         <Route path="/book/:id" component={IndBook} />
         <Redirect to="/categories/all-books" />
       </Switch>

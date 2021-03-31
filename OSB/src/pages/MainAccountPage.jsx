@@ -17,7 +17,7 @@ const MainAccountPage = (props) => {
                   <p className="mb-2 ">useremail@gmail.com</p>
                   <div className="mt-4">
                     <NavLink
-                      to="/myaccount/form"
+                      to="/myaccount/form2"
                       className="btn btn-primary buttonS"
                     >
                       Log Out
