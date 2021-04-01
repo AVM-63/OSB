@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Bdata from './Bdata';
 import NavCat from './NavCat';
 import Spinner from 'react-bootstrap/Spinner';
+import { NavLink, Link } from 'react-router-dom';
 // import { NavLink } from "react-router-dom";
 
 const IndBook = (props) => {
@@ -57,10 +58,12 @@ const IndBook = (props) => {
                 <p className="bookDescription my-0">{book.bookDesc}</p>
                 <p className="explainer pt-3 my-0">Price</p>
                 <p className="bookDescription my-0">₹{book.price}</p>
-                <button className="btn buyButton mt-3">Buy Now</button>
-                <button className="btn cartButton ms-3 mt-3">
+                <NavLink to="/myaccount">
+                  <button className="btn buyButton mt-3">Buy Now</button>
+                </NavLink>
+                {/* <button className="btn cartButton ms-3 mt-3">
                   Add to cart
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

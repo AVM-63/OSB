@@ -18,7 +18,7 @@ const Sresult = ({ name, val, clear }) => {
     <>
       {data.length !== 0 ? (
         <div className="dropdown wrapSearch">
-          <h3 className="bookName">
+          <h3 className="bookName2">
             {data.length !== 0 &&
               name !== '' &&
               data.map((d) => {

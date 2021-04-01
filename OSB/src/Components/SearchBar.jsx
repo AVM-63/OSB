@@ -26,7 +26,7 @@ const SearchBar = () => {
 
   return (
     <>
-      <div className="searchbar mx-5 px-5">
+      <div className=" searchbar mx-5 px-5 ">
         <input
           type="text"
           placeholder="Search by Title"

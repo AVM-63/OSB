@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink, Redirect } from 'react-router-dom';
+import React, { useState, Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import validate from './validateInfo';
 import MainAccountPage from '../MainAccountPage';
 import './Form.css';
@@ -27,16 +27,19 @@ const FormLogin = (props) => {
       .then((result) => {
         console.log('value:', result);
         if (result.length == 0) {
-          alert('You dont have an account!');
+          alert('Invalid Info!');
         } else {
-          alert('Yessir! You have an account!');
+          // alert('Yessir! You have an account!');
           let obj = { data: result };
           localStorage.setItem('account', JSON.stringify(obj));
           props.props.history.push('/myaccount/user');
+          // props.props.history.push('/categories/all-books');
         }
       });
   };
-  console.log('mama', props);
+  // console.log('mama', props);
+  console.log('prev');
+
   return (
     <div className="form-content-right">
       <form onSubmit={handleSubmit} className="form" noValidate>
