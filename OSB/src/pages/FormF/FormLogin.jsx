@@ -32,7 +32,13 @@ const FormLogin = (props) => {
           let obj = { data: result };
           localStorage.setItem('account', JSON.stringify(obj));
           // props.props.history.push('/myaccount/user');
-          props.props.history.push('/razorpay');
+          const bookprice3 = props.bookprice2.bPrice;
+          props.props.history.push({
+            pathname: '/razorpay',
+            bookState: { bookprice4: bookprice3 },
+          });
+          // console.log('bookp3', bookprice3);
+          // props.bookprice2.history.push('/razorpay');
         }
       });
   };

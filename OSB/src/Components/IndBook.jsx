@@ -121,7 +121,12 @@ const IndBook = (props) => {
                 <p className="bookDescription my-0">{book.bookDesc}</p>
                 <p className="explainer pt-3 my-0">Price</p>
                 <p className="bookDescription my-0">₹{book.price}</p>
-                <NavLink to="/myaccount">
+                <NavLink
+                  to={{
+                    pathname: '/myaccount',
+                    bookContent: { bPrice: book.price },
+                  }}
+                >
                   <button
                     // onClick={displayRazorPay}
                     className="btn buyButton mt-3"

@@ -25,6 +25,8 @@ if (document.domain === 'localhost') {
 }
 
 const RazorPayPage = (props) => {
+  const bookPriceFinal = props.location.bookState.bookprice4;
+  console.log('FINAL:', bookPriceFinal);
   // Getting Data from Login Page
   const [localArray, setLocalArray] = useState([]);
   useEffect(() => {
@@ -43,29 +45,44 @@ const RazorPayPage = (props) => {
       alert('RZP Failed');
       return;
     }
+    // fbjdsghjsdfghjsd
 
-    const data = await fetch('http://localhost:2000/razorpay', {
-      method: 'POST',
-    }).then((t) => t.json());
+    // const requestOptions = {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ bookPriceFinal2: bookPriceFinal }),
+    // };
+
+    // jkhsdkjsdkj
+
+    const data = await fetch(
+      'http://localhost:2000/razorpay/?amount=' + bookPriceFinal,
+      { method: 'POST' }
+      // requestOptions
+    ).then((t) => t.json());
 
     console.log(data);
 
     const options = {
       key: __DEV__ ? 'rzp_test_3UnSD7fr6Qmqm0' : 'PRODUCTION_KEY',
       currency: data.currency,
+      // amount: bookPriceFinal,
       amount: data.amount.toString(),
       order_id: data.id,
       name: 'OneStoreBooks',
       description: 'Thanks for choosing OSB',
       image: 'https://i.postimg.cc/GH6GYzMK/logo1.png',
       handler: function (response) {
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature);
+        alert('Done!');
+        props.history.push('/categories/all-books');
+        // alert(response.razorpay_payment_id);
+        // alert(response.razorpay_order_id);
+        // alert(response.razorpay_signature);
+        // <CategoryPage />;
       },
       prefill: {
-        name: localArray.data[0].username,
-        contact: '8888888888',
+        name: localArray.data[0].fullname,
+        contact: localArray.data[0].number,
         email: localArray.data[0].email,
       },
     };

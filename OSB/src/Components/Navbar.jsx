@@ -58,7 +58,7 @@ const Navbar = () => {
                       </NavLink>
                     </li>
 
-                    <li className="nav-item mx-2 px-2">
+                    {/* <li className="nav-item mx-2 px-2">
                       <NavLink
                         activeClassName="menu_active"
                         className="nav-link"
@@ -66,7 +66,7 @@ const Navbar = () => {
                       >
                         Account
                       </NavLink>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
