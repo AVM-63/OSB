@@ -19,6 +19,7 @@ import Topics from './pages/categoryPages/Topics';
 import Footer from './Components/Footer';
 import Form from './pages/FormF/Form';
 import Form2 from './pages/FormF/Form2';
+import RazorPayPage from './Components/RazorPayPage';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route exact path="/myaccount/form2" component={Form2} />
         <Route path="/book/:id" component={IndBook} />
         <Route path="/myaccount/user" component={MainAccountPage} />
+        <Route path="/razorpay" component={RazorPayPage} />
         <Redirect to="/categories/all-books" />
       </Switch>
       <div className="d-none d-lg-block">

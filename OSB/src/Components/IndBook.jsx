@@ -2,10 +2,77 @@ import React, { useEffect, useState } from 'react';
 import Bdata from './Bdata';
 import NavCat from './NavCat';
 import Spinner from 'react-bootstrap/Spinner';
-import { NavLink, Link } from 'react-router-dom';
-// import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+
+// GGGGGGGG
+// function loadScript(src) {
+//   return new Promise((resolve) => {
+//     const script = document.createElement('script');
+//     script.src = src;
+
+//     script.onload = () => {
+//       resolve(true);
+//     };
+//     script.onerror = () => {
+//       resolve(false);
+//     };
+//     document.body.appendChild(script);
+//   });
+// }
+
+// const __DEV__ = document.domain === 'localhost';
+
+// if (document.domain === 'localhost') {
+//   // dev
+// } else {
+//   // prod
+// }
+
+// hjjsjdjdj
 
 const IndBook = (props) => {
+  // // VM
+  // async function displayRazorPay() {
+  //   const res = await loadScript(
+  //     'https://checkout.razorpay.com/v1/checkout.js'
+  //   );
+  //   if (!res) {
+  //     alert('RZP Failed');
+  //     return;
+  //   }
+
+  //   const data = await fetch('http://localhost:2000/razorpay', {
+  //     method: 'POST',
+  //   }).then((t) => t.json());
+
+  //   console.log(data);
+
+  //   const options = {
+  //     key: __DEV__ ? 'rzp_test_3UnSD7fr6Qmqm0' : 'PRODUCTION_KEY',
+  //     currency: data.currency,
+  //     amount: data.amount.toString(),
+  //     order_id: data.id,
+  //     name: 'OneStoreBooks',
+  //     description: 'Thanks for choosing OSB',
+  //     image:
+  //       'https://drive.google.com/file/d/18T2FQffxOhGp0z7cx8HUzG_HI9PTHbBg/view?usp=sharing',
+  //     handler: function (response) {
+  //       alert(response.razorpay_payment_id);
+  //       alert(response.razorpay_order_id);
+  //       alert(response.razorpay_signature);
+  //     },
+  //     prefill: {
+  //       name: 'Gaurav Kumar',
+  //       contact: '8888888888',
+  //       email: 'gaurav.kumar@example.com',
+  //     },
+  //   };
+
+  //   const paymentObject = new window.Razorpay(options);
+  //   paymentObject.open();
+  // }
+
+  //
   const [dbData, setDB] = useState([]);
   const [book, setBook] = useState({});
 
@@ -18,7 +85,6 @@ const IndBook = (props) => {
         setDB(val);
       });
   }, []);
-  // console.log('dbData', dbData);
 
   useEffect(() => {
     if (dbData.length != 0) {
@@ -29,9 +95,6 @@ const IndBook = (props) => {
       setBook(temp2);
     }
   }, [dbData]);
-
-  // console.log('Bdata', Bdata);
-  // console.log('book', book);
 
   return (
     <>
@@ -59,9 +122,18 @@ const IndBook = (props) => {
                 <p className="explainer pt-3 my-0">Price</p>
                 <p className="bookDescription my-0">₹{book.price}</p>
                 <NavLink to="/myaccount">
-                  <button className="btn buyButton mt-3">Buy Now</button>
+                  <button
+                    // onClick={displayRazorPay}
+                    className="btn buyButton mt-3"
+                  >
+                    Buy Now
+                  </button>
                 </NavLink>
-                {/* <button className="btn cartButton ms-3 mt-3">
+
+                {/* <button
+                  onClick={displayRazorPay}
+                  className="btn cartButton ms-3 mt-3"
+                >
                   Add to cart
                 </button> */}
               </div>
@@ -70,7 +142,6 @@ const IndBook = (props) => {
           {/* <img className="bookProperties" src={book.imgsrc} alt={book.bookN}></img> */}
         </>
       ) : (
-        // <p>Loading...</p>
         <Spinner className="loading" animation="border" variant="warning" />
       )}
     </>

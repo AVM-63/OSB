@@ -1,7 +1,7 @@
 import React, { useState, Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import validate from './validateInfo';
-import MainAccountPage from '../MainAccountPage';
+// import validate from './validateInfo';
+// import MainAccountPage from '../MainAccountPage';
 import './Form.css';
 
 let log = false;
@@ -29,15 +29,14 @@ const FormLogin = (props) => {
         if (result.length == 0) {
           alert('Invalid Info!');
         } else {
-          // alert('Yessir! You have an account!');
           let obj = { data: result };
           localStorage.setItem('account', JSON.stringify(obj));
-          props.props.history.push('/myaccount/user');
-          // props.props.history.push('/categories/all-books');
+          // props.props.history.push('/myaccount/user');
+          props.props.history.push('/razorpay');
         }
       });
   };
-  // console.log('mama', props);
+  console.log('mama', props);
   console.log('prev');
 
   return (

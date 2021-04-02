@@ -150,6 +150,12 @@ body {
   /* border: 2px solid red; */
   /* margin-top: 70px; */
 }
+#header2 {
+  height: 80vh;
+  width: 100%;
+  /* border: 2px solid red; */
+  /* margin-top: 70px; */
+}
 
 .hell {
   border: 2px solid blue;
@@ -304,6 +310,35 @@ body {
   background-color: #ff8b26 !important;
   color: #fff !important;
   transition: 0.5s;
+}
+
+.buyButton2 {
+  border-radius: 10px !important;
+  background-color: #ffa95e !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: capitalize !important;
+}
+.buyButton2:hover {
+  background-color: #ff8b26 !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+
+.container2 {
+  min-height: 70vh;
+  position: relative;
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .cartButton {
