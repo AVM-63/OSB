@@ -10,6 +10,7 @@
 html {
   height: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,8 +23,40 @@ body {
   min-height: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(252, 252, 252);
+  opacity: 0%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffa95e;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8b26;
+}
+
 /* NAVBAR */
 
+.jumbo1 {
+  /* background: url('./images/vectorImages/OneStoreBooks.png'); */
+  background: url('https://mediad.publicbroadcasting.net/p/shared/npr/styles/x_large/nprshared/202012/673392488.jpg');
+  height: 300px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: 1300px 900px;
+  /* filter: blur(1px); */
+  /* -webkit-filter: blur(1px); */
+}
+
+.spacing {
+  margin-top: 150px;
+}
 .searchbar {
   width: 60%;
   height: auto;
@@ -74,6 +107,14 @@ body {
 
 .navbar {
   /* background-color: #fffbf9 !important; */
+  background-color: rgb(252, 252, 252) !important;
+  overflow: hidden;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background-color: rgb(252, 252, 252) !important;
 }
 
@@ -188,6 +229,10 @@ body {
   }
 }
 /* BOOK */
+
+.optionBook {
+  cursor: url('./images/vectorImages/cart.svg'), auto;
+}
 
 .bookCover {
   height: auto;
@@ -385,6 +430,18 @@ body {
   text-decoration: none;
 }
 
+.clearbutton {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(252, 252, 252) !important;
+  color: #d3d3d3;
+}
+.clearbutton:hover {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(252, 252, 252) !important;
+  color: #ffa95e;
+}
 .secName:hover {
   color: #ffa95e !important;
 }

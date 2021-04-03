@@ -8,7 +8,7 @@ const router = express.Router();
 // Getting DATA FOR BOOKDB
 
 //
-
+// console.log('DBJKhjkdshjkdahjksdhjksdhjkkasj');
 //RAZORPAY
 const Razorpay = require('razorpay');
 const shortid = require('shortid');
@@ -20,8 +20,10 @@ const razorpay = new Razorpay({
 
 app.use(cors());
 app.post('/razorpay', async (req, res) => {
+  console.log('req', req);
+  // const amount = 249;
+  const amount = req.query.amount;
   const payment_capture = 1;
-  const amount = 249;
   const currency = 'INR';
   const options = {
     amount: amount * 100,
@@ -60,7 +62,7 @@ router.post('/create', function (req, res) {
 router.post('/signup', function (req, res) {
   console.log('Data in backend', req.body.data);
   let data = req.body.data;
-  let query = `INSERT INTO user (username, email, password) VALUES ('${data.username}', '${data.email}', '${data.password}')`;
+  let query = `INSERT INTO user (username, fullname, email, number, password) VALUES ('${data.username}', '${data.fullname}', '${data.email}', '${data.number}', '${data.password}')`;
   db.query(query, function (err, results) {
     if (err) {
       console.log('error thai gyu', err);

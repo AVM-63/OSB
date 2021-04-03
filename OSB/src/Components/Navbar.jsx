@@ -5,9 +5,9 @@ import SearchBar from './SearchBar';
 const Navbar = () => {
   return (
     <>
-      <div className="container-fluid nav_bg">
+      <div className="container-fluid nav_bg sticky">
         <div className="row">
-          <div className="col-12 col-lg-10 my-2 mx-auto">
+          <div className="col-12 col-lg-10 my-2 mx-auto ">
             <nav className="navbar navbar-expand-lg navbar-light">
               <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/categories/all-books">
@@ -17,7 +17,7 @@ const Navbar = () => {
                 <SearchBar />
 
                 <button
-                  className="navbar-toggler"
+                  className="navbar-toggler d-none"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent"
@@ -41,7 +41,7 @@ const Navbar = () => {
                     <li className="nav-item mx-2 px-2">
                       <NavLink
                         activeClassName="menu_active"
-                        className="nav-link"
+                        className="nav-link d-none d-md-block"
                         to="/categories/all-books"
                       >
                         Home
@@ -51,7 +51,7 @@ const Navbar = () => {
                     <li className="nav-item mx-2 px-2">
                       <NavLink
                         activeClassName="menu_active"
-                        className="nav-link"
+                        className="nav-link d-none d-md-block"
                         to="/about"
                       >
                         About

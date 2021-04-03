@@ -62,7 +62,9 @@ const Topics = (props) => {
   return (
     <>
       {data.length !== 0 ? (
-        <CategoryPage array={data} />
+        <>
+          <CategoryPage array={data} />
+        </>
       ) : (
         <Spinner className="loading" animation="border" variant="warning" />
       )}

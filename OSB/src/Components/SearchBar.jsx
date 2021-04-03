@@ -26,15 +26,24 @@ const SearchBar = () => {
 
   return (
     <>
-      <div className=" searchbar mx-5 px-5 ">
-        <input
-          type="text"
-          placeholder="Search by Title"
-          onChange={inputEvent}
-          value={bookSearch}
-        />
+      <div className=" searchbar mx-5 px-5 d-none d-lg-block">
+        <div className="d-flex row justify-content-center align-items-center">
+          <div className="col-10">
+            <input
+              type="text"
+              placeholder="Search by Title"
+              onChange={inputEvent}
+              value={bookSearch}
+            />
+          </div>
+          <div className="col-2">
+            <button className="clearbutton" onClick={clear}>
+              X
+            </button>
+          </div>
 
-        <Sresult name={bookSearch} val={initData} clear={clear} />
+          <Sresult name={bookSearch} val={initData} clear={clear} />
+        </div>
       </div>
     </>
   );
