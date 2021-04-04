@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect, useHistory } from 'react-router-dom';
 import validate from './validateInfo';
 import UseForm from './UseForm';
 import FormSuccess from './FormSuccess';
@@ -12,6 +12,7 @@ const FormSignup = ({ submitForm }) => {
   const [number, setNumber] = useState('');
   const [password, setPassword] = useState('');
   const [password2, setpassword2] = useState('');
+  let history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,11 +25,14 @@ const FormSignup = ({ submitForm }) => {
       password,
       password2
     );
+    // const fakepush = 24;
     if (password2 != password) {
       console.log('Passwords arent same!');
       alert("Passwords don't match");
     } else {
       alert('Account Created!');
+      history.push('/categories/all-books');
+      // fakepush.history.push('/categories/all-books');
 
       fetch('http://localhost:2000/signup', {
         method: 'POST',
