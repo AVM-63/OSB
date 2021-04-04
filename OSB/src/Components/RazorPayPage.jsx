@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import shopBook from '../images/vectorImages/shopBook.svg';
+import 'react-notifications/lib/notifications.css';
+import {
+  NotificationContainer,
+  NotificationManager,
+} from 'react-notifications';
 
 function loadScript(src) {
   return new Promise((resolve) => {
@@ -73,12 +78,11 @@ const RazorPayPage = (props) => {
       description: 'Thanks for choosing OSB',
       image: 'https://i.postimg.cc/GH6GYzMK/logo1.png',
       handler: function (response) {
-        alert('Done!');
-        props.history.push('/categories/all-books');
-        // alert(response.razorpay_payment_id);
-        // alert(response.razorpay_order_id);
-        // alert(response.razorpay_signature);
-        // <CategoryPage />;
+        // alert('Done!');
+        NotificationManager.success('Payment Sucessful', 'Congratulations!');
+        setTimeout(() => {
+          props.history.push('/categories/all-books');
+        }, 2000);
       },
       prefill: {
         name: localArray.data[0].fullname,
@@ -93,6 +97,7 @@ const RazorPayPage = (props) => {
 
   return (
     <>
+      <NotificationContainer />
       <section id="header2" className="d-flex align-items-center">
         <div className="container-fluid">
           <div className="row">

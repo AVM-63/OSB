@@ -1,7 +1,6 @@
 import React from 'react';
 import Book from './Book';
 import NavCat from './NavCat';
-
 const CategoryPage = (props) => {
   return (
     <>
