@@ -1,27 +1,30 @@
-
 import React, { useState } from 'react';
 import './Form.css';
 import FormLogin from './FormLogin';
 import FormSuccess from './FormSuccess';
 
-const Form = () => {
-    const [isSubmitted, setIsSubmitted] = useState(false);
+const Form = (props) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-    function submitForm() {
-        setIsSubmitted(true);
-    }
-    return (
-        <>
-            <div className='form-container'>
-                {/* <span className='close-btn'>×</span> */}
-                {!isSubmitted ? (
-                    <FormLogin submitForm={submitForm} />
-                ) : (
-                    <FormSuccess />
-                )}
-            </div>
-        </>
-    );
+  function submitForm() {
+    setIsSubmitted(true);
+  }
+  console.log(props);
+  return (
+    <>
+      <div className="form-container">
+        {!isSubmitted ? (
+          <FormLogin
+            submitForm={submitForm}
+            props={props.props}
+            bookprice2={props.bookprice}
+          />
+        ) : (
+          <FormSuccess />
+        )}
+      </div>
+    </>
+  );
 };
 
 export default Form;
